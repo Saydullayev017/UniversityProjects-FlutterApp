@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/HomeAppBarr.dart';
 
 import '../widgets/CategoriesWidget.dart';
+import '../widgets/ItemsWidget.dart';
 
 class HomePage extends StatelessWidget{
   @override
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget{
       body: ListView(children: [
         HomeAppBarr(),
         Container(
-          height: 500,
+          // height: 500,
           padding: EdgeInsets.only(top: 15),
           decoration: BoxDecoration(
             color: Color(0xFFEDECF2),
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget{
             ),
           ),
           child: Column(children: [
+            
             Container(
               margin: EdgeInsets.symmetric(horizontal: 15),
               padding: EdgeInsets.symmetric(horizontal: 15),
@@ -49,6 +51,7 @@ class HomePage extends StatelessWidget{
                 ),
               ]),
             ),
+
             Container(
               alignment: Alignment.centerLeft,
               margin: EdgeInsets.symmetric(
@@ -65,7 +68,23 @@ class HomePage extends StatelessWidget{
             ),
 
             CategoriesWidget(),
-          ]),
+
+            Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              child:  Text(
+                "Хорошие Товары",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF4C53A5)
+                ),
+              ),
+            ),
+
+            ItemsWidget(),
+          ],
+          ),
         ),
       ]),
     );

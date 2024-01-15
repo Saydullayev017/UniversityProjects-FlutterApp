@@ -8,6 +8,7 @@ class CategoriesWidget extends StatelessWidget{
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: [
+        for(int i = 1; i < 3; i++)
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
           padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
@@ -18,7 +19,12 @@ class CategoriesWidget extends StatelessWidget{
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("images/1.jpg", width: 40, height: 40,),
+              Image.asset("images/$i.jpg", width: 50, height: 50,),
+              Text("Клавиятура", style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Color(0xFF4C53A5)
+              ),),
             ],
           ),
         )
